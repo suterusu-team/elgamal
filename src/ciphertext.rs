@@ -10,7 +10,7 @@ use zkp::{CompactProof, Transcript};
 
 define_proof! {dleq, "DLEQ Proof", (x), (A, B, H), (G) : A = (x * B), H = (x * G)}
 
-#[derive(Serialize, Deserialize, Copy, Clone, Debug)]
+#[derive(Serialize, Deserialize, Copy, Clone, Debug, PartialEq)]
 pub struct Ciphertext {
     pub pk: PublicKey,
     pub points: (RistrettoPoint, RistrettoPoint),
